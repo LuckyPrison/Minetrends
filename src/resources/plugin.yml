@@ -3,10 +3,12 @@ version: ${project.version}
 website: ${project.url}
 authors: [NXTGUY, VolcanicPlaza, Packet]
 
+depend: [Lib]
+
 main: com.volcanicplaza.minetrends.Minetrends
 database: false
 
 commands:
   minetrends:
-    descrption: Main command for the Minetrends plugin.
-    aliases: [minet, mtrends, mt]
+    descrption: Minetrends management command.
+    aliases: [mtrends]
