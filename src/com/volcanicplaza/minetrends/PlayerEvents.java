@@ -1,4 +1,4 @@
-package com.volcanicplaza.Minetrends;
+package com.volcanicplaza.minetrends;
 
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;

@@ -1,4 +1,4 @@
-package com.volcanicplaza.Minetrends;
+package com.volcanicplaza.minetrends;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -35,7 +35,7 @@ import org.codehaus.jackson.JsonGenerationException;
 import org.codehaus.jackson.map.JsonMappingException;
 import org.codehaus.jackson.map.ObjectMapper;
 
-import com.volcanicplaza.Minetrends.Updater.UpdateResult;
+import com.volcanicplaza.minetrends.Updater.UpdateResult;
 
 public class Minetrends extends JavaPlugin {
 	
@@ -214,7 +214,7 @@ public class Minetrends extends JavaPlugin {
 			Bukkit.getLogger().warning("***************************************************************");
 		} else {
 			Bukkit.getLogger().info("<Minetrends> Sucessfully authenticated with Minetrends.");
-			Minetrends.runnable = Bukkit.getServer().getScheduler().runTaskTimerAsynchronously(plugin, new sendRunnable(), 20L, (20 * time));
+			Minetrends.runnable = Bukkit.getServer().getScheduler().runTaskTimerAsynchronously(plugin, new SendRunnable(), 20L, (20 * time));
 			
 		}
 	}

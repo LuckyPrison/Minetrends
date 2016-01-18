@@ -1,4 +1,4 @@
-package com.volcanicplaza.Minetrends;
+package com.volcanicplaza.minetrends;
 
 
 import javax.annotation.Generated;

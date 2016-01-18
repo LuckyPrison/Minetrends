@@ -1,9 +1,9 @@
 name: Minetrends
 version: ${project.version}
 website: ${project.url}
-author: NXTGUY & VolcanicPlaza
+authors: [NXTGUY, VolcanicPlaza, Packet]
 
-main: com.volcanicplaza.Minetrends.Minetrends
+main: com.volcanicplaza.minetrends.Minetrends
 database: false
 
 commands:

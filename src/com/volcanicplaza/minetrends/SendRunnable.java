@@ -1,4 +1,4 @@
-package com.volcanicplaza.Minetrends;
+package com.volcanicplaza.minetrends;
 
 import java.io.BufferedReader;
 import java.io.DataOutputStream;
@@ -12,7 +12,7 @@ import java.net.URL;
 import org.bukkit.Bukkit;
 import org.codehaus.jackson.map.ObjectMapper;
 
-public class sendRunnable implements Runnable {
+public class SendRunnable implements Runnable {
 
 	@SuppressWarnings("unused")
 	@Override
