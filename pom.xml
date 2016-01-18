@@ -5,7 +5,7 @@
     <artifactId>Minetrends</artifactId>
     <groupId>com.volcanicplaza</groupId>
     <description>Minetrends statistics plugin</description>
-    <version>1.4.1</version>
+    <version>1.5</version>
     <url>http://minetrends.com</url>
 
     <parent>
