@@ -23,12 +23,12 @@ public class ResponseProtocol {
 	
 	@JsonProperty("RESPONSE_CODE")
 	public int getRESPONSE_CODE() {
-	return RESPONSE_CODE;
+	return this.RESPONSE_CODE;
 	}
 	
 	@JsonProperty("RESPONSE_MESSAGE")
 	public String getRESPONSE_MESSAGE() {
-	return RESPONSE_MESSAGE;
+	return this.RESPONSE_MESSAGE;
 	}
 
 }

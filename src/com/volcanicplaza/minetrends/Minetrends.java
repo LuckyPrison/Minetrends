@@ -52,7 +52,7 @@ public class Minetrends extends Plugin {
 	public static double apiVersion = 1;
 	
 	//Player Join Times
-	public static Map<String, Long> playerJoins = new HashMap<String, Long>();
+	public static Map<String, Long> playerJoins = new HashMap<>();
 	
 	@Override
 	public void load(){
@@ -134,9 +134,11 @@ public class Minetrends extends Plugin {
 		wr.close();
 		
 		// Open a stream which can read the server response
-		InputStream in = conn.getInputStream();
+		InputStream in = null;
+		BufferedReader rd = null;
 		try {
-			BufferedReader rd  = new BufferedReader(new InputStreamReader(in));
+			in = conn.getInputStream();
+			rd = new BufferedReader(new InputStreamReader(in));
 			String response = rd.readLine();
 			
 			if (response != null){
@@ -156,8 +158,8 @@ public class Minetrends extends Plugin {
 		} catch (IOException e) {
 			e.printStackTrace();
 		} finally { //in this case, we are ensured to close the input stream
-			if (in != null)
-			in.close();
+			if (in != null) in.close();
+			if (rd != null) rd.close();
 		}
 		} catch (IOException e) {
 		}finally {  //in this case, we are ensured to close the connection itself
@@ -200,18 +202,18 @@ public class Minetrends extends Plugin {
 	public static String getData(){
 		ObjectMapper mapper = new ObjectMapper();
 		
-		List<Player> playersObj = new ArrayList<Player>();
+		List<Player> playersObj = new ArrayList<>();
 		for (Player player : plugin.getServer().getOnlinePlayers()) {
 			playersObj.add(player);
 		}
 		
-		Map<String,Object> servers = new HashMap<String,Object>();
+		Map<String,Object> servers = new HashMap<>();
 		
-		Map<String,Object> data = new HashMap<String,Object>();
-		Map<String,Object> playersList = new HashMap<String,Object>();
+		Map<String,Object> data = new HashMap<>();
+		Map<String,Object> playersList = new HashMap<>();
 		
 		for (Player plr : playersObj){
-			Map<String,String> player = new HashMap<String,String>();
+			Map<String,String> player = new HashMap<>();
 			
 			//Player's IP Address
 			player.put("ADDRESS", Encryption.encryptString(plr.getAddress().toString()));

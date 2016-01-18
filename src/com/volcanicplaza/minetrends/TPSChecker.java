@@ -31,6 +31,7 @@ public class TPSChecker implements Runnable {
 	    return System.currentTimeMillis() - time;
 	  }
 	 
+	  @Override
 	  public void run()
 	  {
 	    Ticks[(TickCount % Ticks.length)] = System.currentTimeMillis();
