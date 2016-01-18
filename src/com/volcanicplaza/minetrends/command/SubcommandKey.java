@@ -11,7 +11,7 @@ class SubcommandKey extends SimpleSubCommand {
 
 	protected SubcommandKey(Command command)
 	{
-		super(command, "reload", "rel");
+		super(command, "key", "setkey");
 
 		this.withArgument("key", ArgStrategy.ENTERED_STRING, "minetrends.key_needed");
 
