@@ -223,10 +223,10 @@ public class Minetrends extends Plugin {
 			
 			//Player's XP Level
 			player.put("XPLEVELS", Encryption.encryptString(String.valueOf(plr.getLevel())));
-			
+
 			//How long the player has been playing this login session.
-			long plrSessionTime = 0;
-			plrSessionTime = System.currentTimeMillis() - Minetrends.playerJoins.get(plr.getName());
+			Long current = Minetrends.playerJoins.get(plr.getName());
+			long plrSessionTime = current == null ? 0 : System.currentTimeMillis() - current;
 			player.put("sessionTime", Encryption.encryptString((plrSessionTime / 1000) + ""));
 			
 			//Player's Minecraft Language
