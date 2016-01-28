@@ -3,8 +3,7 @@ package com.volcanicplaza.minetrends;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
 import org.bukkit.event.player.PlayerJoinEvent;
-
-import com.ulfric.lib.api.player.PlayerDisconnectEvent;
+import org.bukkit.event.player.PlayerQuitEvent;
 
 public class PlayerEvents implements Listener {
 
@@ -14,7 +13,7 @@ public class PlayerEvents implements Listener {
 	}
 
 	@EventHandler
-	public static void onPlayerQuit(PlayerDisconnectEvent e) {
+	public static void onPlayerQuit(PlayerQuitEvent e) {
 		Minetrends.playerJoins.remove(e.getPlayer().getName());
 	}
 
