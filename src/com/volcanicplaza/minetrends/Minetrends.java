@@ -258,7 +258,7 @@ public class Minetrends extends Plugin {
 		//Total Number of Entities
 		int totalEntities = 0;
 		for (World world : Bukkit.getWorlds()) {
-			totalEntities = totalEntities + world.getEntities().size();
+			totalEntities += world.getEntities().size();
 		}
 		data.put("totalEntities", Encryption.encryptString(totalEntities + ""));
 		
